@@ -1,0 +1,17 @@
+NAME: 
+
+Step 1: 30 ()
+-------------
+() 15 - BFS accurately traverses the full graph (and returns false) when given non-existent data
+() 15 - BFS accurately returns true when given data that is in the graph
+
+Step 2: 20 ()
+---------------
+() 10 - Iterative DFS traverses the full graph (and returns false) when given non-existent data
+() 10 - Iterative DFS returns true when given data that is in the graph
+
+Step 3: 50 ()
+---------------
+() 25 - Recursive DFS traverses the full graph (and returns false) when given non-existent data
+() 25 - Recursive DFS returns true when given data that is in the graph
+
