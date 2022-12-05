@@ -43,7 +43,7 @@ public class Main {
                 removedData.visit();
                 for (Node removeNode : removedData.neighbors) {
                      
-                    if(removeNode.visited == false && queue.contains(removeNode.data) == false){
+                    if(removeNode.visited == false && queue.contains(removeNode) == false){
                         queue.add(removeNode);
                     }
                 }
@@ -59,13 +59,13 @@ public class Main {
         while (stack.isEmpty() == false){ // while queue is not empty
             Node removedData = stack.pop();
             if (removedData.data == targetData) {
-                    System.out.println("found target");
+                    System.out.println("found target " + targetData);
                     return true; 
             } else {
                 removedData.visit();
                 for (Node neigbhorNode : removedData.neighbors) {
                      
-                    if(neigbhorNode.visited == false && stack.contains(neigbhorNode.data) == false){
+                    if(neigbhorNode.visited == false && stack.contains(neigbhorNode) == false){
                         stack.push(neigbhorNode);
                     }
                 }
