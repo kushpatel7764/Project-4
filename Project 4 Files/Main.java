@@ -75,9 +75,23 @@ public class Main {
     }
 
     public static boolean dfsRecursive(Node current, String targetData) {
-        return false; //TODO: remove this before starting step 3, it's only here to let the code compile before then
+        if (current.data == targetData) {
+            System.out.println("found target " + targetData);
+            return true;
+        } else {
+            boolean found = false;
+            current.visit();
+            for (Node neighbor_Node : current.neighbors) {
+                if (neighbor_Node.visited == false) {
+                    found = dfsRecursive(neighbor_Node, targetData);
+                    if (found == true) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
     }
-
     public static Node buildGraph() {
         //TODO: This method builds the graph shown in Graph Image.png in the project download. Do not modify.
         Node A = new Node("A");
